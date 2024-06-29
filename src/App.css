@@ -1,8 +1,63 @@
 #root {
-  max-width: 1280px;
+  max-width: 1920px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  color: #ffffff;
+}
+
+body {
+  background: url("src/Images/marcelo-unsplash.jpg"), url("src/Images/wilfried-unsplash.jpg"), url("src/Images/aaron-unsplash.jpg"), url("src/Images/luke-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: center;
+}
+
+.container {
+  width: auto;
+  height: 36rem;
+  margin: auto;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.73);
+}
+
+.wallpaper {
+  width: 30rem;
+  height: 36rem;
+  background-image: url("src/Images/Sky With Electricity/niilo-unsplash.jpg");
+  background-size: cover;
+}
+
+button {
+  display: inline;
+  margin: 5px 5px 10px 5px;
+}
+
+h2 {
+  display: inline;
+  margin: 40px;
+}
+
+input[type="search"] {
+  display: inline;
+  margin: 5px 5px 30px 5px;
+}
+
+.weather-info {
+  margin-top: 10px;
 }
 
 .logo {
@@ -11,9 +66,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +79,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +97,135 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/*-- Responsive Code --*/
+
+@media screen and (max-width: 1920px) and (min-width:1281px) {
+  #root {
+    max-width: 1920px;
+    min-width: 1281px;
+  }
+
+  .container {
+    height: 36rem;
+    margin:0px;
+  }
+
+  .highlighter {
+    margin-top: 480px;
+  }
+
+  h2 {
+    display: inline;
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width:1025px) {
+  #root {
+    max-width: 1280px;
+    min-width: 1025px;
+  }
+
+  .container {
+    height: 36rem;
+    margin:0px;
+  }
+
+  .highlighter {
+    margin-top: 490px;
+  }
+
+  h2 {
+    display: inline;
+    margin: 50px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) and (min-width:769px) {
+  #root {
+    max-width: 1024px;
+    min-width: 769px;
+  }
+
+  .container {
+    height: 36rem;
+  }
+
+  .highlighter {
+    margin-top: 490px;
+  }
+
+  h2 {
+    display: inline;
+    margin: 50px;
+  }
+
+}
+
+@media screen and (max-width: 768px) and (min-width:481px) {
+  #root {
+    max-width: 768px;
+    min-width: 481px;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  h2 {
+    display: inline;
+    margin: 40px;
+  }
+
+  .wallpaper {
+    width: 26rem;
+    height: 23rem;
+  }
+
+  .highlighter {
+    margin-top: 315px;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width:320px) {
+  #root {
+    max-width: 480px;
+    min-width: 320px;
+    padding: 1rem;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .wallpaper {
+    width: 18rem;
+    height: 20rem;
+  }
+
+  .container {
+    width: 18rem;
+    height: auto;
+  }
+
+  h2 {
+    display: inline;
+    margin: 15px;
+  }
+
+  input[type="search"] {
+    display: inline;
+    margin: 2px 2px 5px 2px;
+  }
+
+  .highlighter {
+    margin-top: 265px;
+  }
 }
