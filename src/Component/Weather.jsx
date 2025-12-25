@@ -53,7 +53,7 @@ function Weather() {
 
                 {loading && <p>Loading...</p>}
 
-                {error && <p className="error">Error: {error}</p>}
+                {error && <><p className="error">No Data Found </p> <p>Error: {error}</p></>}
 
                 {weatherData && (
                     <div className="weather-info">
